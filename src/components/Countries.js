@@ -3,12 +3,10 @@ import React from 'react';
 import {
   makeStyles,
   withStyles,
-  Paper,
   AppBar,
   Tabs,
   Tab,
   Box,
-  Typography
 } from '@material-ui/core';
 import CountryList from './CountryList';
 
@@ -31,8 +29,8 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
+        <Box className="Countries-box">
+          <div>{children}</div>
         </Box>
       )}
     </div>

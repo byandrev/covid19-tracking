@@ -1,22 +1,32 @@
 import {
   ListItem,
-  ListItemText,
   makeStyles
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    fontFamily: 'Poppins',
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
   number: {
-    textAlign: 'right'
+    textAlign: 'right',
+    fontWeight: '200',
+    color: '#aaa'
+  },
+  flag:{
+    width: '30px'
   }
 }));
 
-function CountryItem({ country, number }) {
+function CountryItem({ flag, country, number }) {
   const classes = useStyles();
 
   return(
-    <ListItem button>
-      <ListItemText primary={country} />
-      <ListItemText className={classes.number} primary={number} />
+    <ListItem button className={classes.root}>
+      <img className={classes.flag} src={flag} alt={country} />
+      <p>{country}</p>
+      <p className={classes.number}>{number}</p>
     </ListItem>
   );
 }

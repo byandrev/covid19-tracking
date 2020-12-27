@@ -15,6 +15,8 @@ function CountryList({ type }) {
     getCountriesData();
   }, []);
 
+  console.log(countries[0])
+
   return(
     <div className="CountryList">
       {
@@ -24,7 +26,7 @@ function CountryList({ type }) {
           if(type === 'deaths') numbers = country.deaths
           if(type === 'recovereds') numbers = country.recovered
 
-          return <CountryItem key={country.country} country={country.country} number={numbers} />
+          return <CountryItem key={country.country} flag={country.countryInfo.flag} country={country.country} number={numbers} />
         })
       }
     </div>
