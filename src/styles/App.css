@@ -1,0 +1,10 @@
+.App {
+  display: grid;
+}
+
+@media screen and (min-width: 960px) {
+  .App {
+    grid-template-columns: 2fr minmax(200px, 1fr);
+    grid-template-rows: 100vh;
+  }
+}

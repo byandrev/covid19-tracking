@@ -1,0 +1,9 @@
+.CountryList {
+}
+
+@media screen and (min-width: 960px) {
+  .CountryList {
+    height: 70vh;
+    overflow-y: auto;
+  }
+}
