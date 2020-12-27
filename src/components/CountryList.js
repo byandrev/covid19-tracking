@@ -1,22 +1,7 @@
 import '../styles/CountryList.css';
-import { useEffect, useState } from 'react';
 import CountryItem from './CountryItem';
-import getCountries from '../services/getCountries';
 
-function CountryList({ type }) {
-  const [countries, setCountries] = useState([]);
-
-  const getCountriesData = async () => {
-    let data = await getCountries();
-    setCountries(data)
-  }
-
-  useEffect(() => {
-    getCountriesData();
-  }, []);
-
-  console.log(countries[0])
-
+function CountryList({ countries, type }) {
   return(
     <div className="CountryList">
       {

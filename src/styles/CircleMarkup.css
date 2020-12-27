@@ -1,0 +1,13 @@
+.CircleMarkup-popup {
+  /*padding: 1rem;*/
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.CircleMarkup-popup h5 {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.CircleMarkup-popup p {
+  margin: 0 0 .2rem 0;
+}

@@ -1,3 +1,19 @@
+.Header {
+  position: relative;
+  z-index: 99;
+  width: 150px;
+}
 .Header-subtitle {
   color: #aaa;
+}
+
+@media screen and (max-width: 959px) {
+  .Header {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gray-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }

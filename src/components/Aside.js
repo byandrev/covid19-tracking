@@ -1,11 +1,11 @@
 import '../styles/Aside.css';
 import Countries from './Countries';
 
-function Aside() {
+function Aside({ countries }) {
   return(
     <aside className="Aside">
       <h3>Cases info</h3>
-      <Countries/>
+      <Countries countries={countries} />
     </aside>
   );
 }

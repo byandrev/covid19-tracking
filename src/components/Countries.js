@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function Countries() {
+function Countries({ countries }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -77,13 +77,13 @@ function Countries() {
       </AppBar>
 
       <TabPanel value={value} index={0}>
-        <CountryList type="cases" />
+        <CountryList countries={countries} type="cases" />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <CountryList type="deaths" />
+        <CountryList countries={countries} type="deaths" />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <CountryList type="recovereds" />
+        <CountryList countries={countries} type="recovereds" />
       </TabPanel>
     </div>
   );
