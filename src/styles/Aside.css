@@ -4,3 +4,14 @@
   position: relative;
   z-index: 99;
 }
+.Aside-link {
+  color: #2196f3;
+}
+.Aside-copy {
+  border-top: 1px solid #444;
+  padding-top: .5rem;
+  margin-top: .5rem;
+  display: block;
+  text-align: center;
+  font-size: .9rem;
+}

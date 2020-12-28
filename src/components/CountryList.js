@@ -11,7 +11,12 @@ function CountryList({ countries, type }) {
           if(type === 'deaths') numbers = country.deaths
           if(type === 'recovereds') numbers = country.recovered
 
-          return <CountryItem key={country.country} flag={country.countryInfo.flag} country={country.country} number={numbers} />
+          return <CountryItem
+                  key={country.country}
+                  flag={country.countryInfo.flag}
+                  country={country.country}
+                  number={numbers}
+                />
         })
       }
     </div>

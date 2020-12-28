@@ -1,0 +1,28 @@
+.CountryInfo {
+  padding: 1rem 2rem;
+}
+
+.CountryInfo-ListCards {
+  margin-top: .2rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.CountryInfo-flag {
+  width: 30px;
+}
+.CountryInfo-card {
+  cursor: pointer;
+  transition: all 200ms;
+}
+.CountryInfo-card:hover {
+  opacity: .8;
+  transform: scale(.95);
+}
+
+
+@media screen and (min-width: 960px) {
+  .CountryInfo-ListCards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

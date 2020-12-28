@@ -1,25 +1,14 @@
-import './styles/App.css';
-import { useEffect, useState } from 'react';
-import ContentMain from './components/ContentMain';
-import Aside from './components/Aside';
-import getCountries from './services/getCountries';
+import { Route } from 'wouter';
+
+// Pages
+import Home from './pages/Home';
+import Country from './pages/Country';
 
 function App() {
-  const [countries, setCountries] = useState([]);
-
-  const getCountriesData = async () => {
-    let data = await getCountries();
-    setCountries(data)
-  }
-
-  useEffect(() => {
-    getCountriesData();
-  }, []);
-
   return (
     <div className="App">
-      <ContentMain countries={countries} />
-      <Aside countries={countries} />
+      <Route path="/" exact component={Home}></Route>
+      <Route path="/country/:id" component={Country}></Route>
     </div>
   );
 }

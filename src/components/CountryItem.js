@@ -1,3 +1,4 @@
+import { Link } from 'wouter';
 import {
   ListItem,
   makeStyles
@@ -23,11 +24,13 @@ function CountryItem({ flag, country, number }) {
   const classes = useStyles();
 
   return(
-    <ListItem button className={classes.root}>
-      <img className={classes.flag} src={flag} alt={country} />
-      <p>{country}</p>
-      <p className={classes.number}>{number}</p>
-    </ListItem>
+    <Link href={`/country/${country}`}>
+      <ListItem button className={classes.root}>
+        <img className={classes.flag} src={flag} alt={country} />
+        <p>{country}</p>
+        <p className={classes.number}>{number}</p>
+      </ListItem>
+    </Link>
   );
 }
 

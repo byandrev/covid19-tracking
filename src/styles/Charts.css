@@ -1,0 +1,10 @@
+.Charts {
+  width: 100%;
+  margin-top: .2rem;
+}
+
+@media screen and (max-width: 959px) {
+  .Charts {
+    margin-top: 2rem;
+  }
+}
